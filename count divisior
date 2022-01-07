@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{
+	int N = 0,sum,re,temp;
+	scanf("%d", &N);
+	
+	long data[N];
+	for(auto i=0; i<N; i++)
+	{   
+		scanf("%ld", &data[i]);
+		temp=data[i]%10;
+    	sum *= 10;
+		sum += temp;
+		re = sum%10;
+		if(re == 0)
+			sum=0;
+	}
+	if(sum%10==0)
+	{
+		printf("Yes");
+	}
+	else
+	{
+		printf("No");
+	}
+}
